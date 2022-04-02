@@ -1,4 +1,10 @@
 const express = require('express');
 const app = express();
 
-app.listen(3000, ()=> console.log('Server running'));
+// Import Routes
+const authRoutes = require('./routes/auth');
+
+// Route Middlewares
+app.use('/api/user', authRoutes)
+
+app.listen(3001, ()=> console.log('Server running'));
