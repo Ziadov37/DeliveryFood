@@ -3,8 +3,9 @@ const app = express();
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 
+// Import Routes
+const authRoutes = require('./routes/auth');
 
-dotenv.config();
 
 // Connect to db
 const DB = 'mongodb://localhost:27017/DelieryFood';
@@ -17,10 +18,11 @@ mongoose.connect(DB).then(() => {
     console.log(err);
 });
 
-// Import Routes
-const authRoutes = require('./routes/auth');
+// Middlewares
+app.use(express.json());
+
 
 // Route Middlewares
 app.use('/api/user', authRoutes)
 
-app.listen(3001, ()=> console.log('Server running'));
+app.listen(3000, ()=> console.log('Server running'));
