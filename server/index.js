@@ -5,6 +5,8 @@ const mongoose = require('mongoose');
 
 // Import Routes
 const authRoutes = require('./routes/auth');
+const postRoutes = require('./routes/post');
+
 
 
 // Connect to db
@@ -23,6 +25,7 @@ app.use(express.json());
 
 
 // Route Middlewares
-app.use('/api/user', authRoutes)
+app.use('/api/user', authRoutes);
+app.use('/api/post', postRoutes);
 
 app.listen(3000, ()=> console.log('Server running'));
