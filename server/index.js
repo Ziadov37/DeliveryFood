@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 
 // Import Routes
 const authRoutes = require('./routes/users');
-const postRoutes = require('./routes/post');
+// const postRoutes = require('./routes/post');
 
 console.log(process.env.APP_SECRET);
 
