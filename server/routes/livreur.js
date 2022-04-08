@@ -2,7 +2,7 @@ const router = require('express').Router();
 require("dotenv").config();
 
 // Brign in the livreur Registration function
-const {livreurRegister, livreurlogin} = require("../utils/livreurController"); 
+const {livreurRegister, livreurlogin} = require("../controller/livreurController"); 
 
 // livreur Registeration Route
 router.post("/register_livreur", async(req,res)=>{

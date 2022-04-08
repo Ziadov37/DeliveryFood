@@ -2,7 +2,7 @@ const router = require('express').Router();
 require("dotenv").config();
 
 // Brign in the user Registration function
-const {userRegister, userlogin} = require("../utils/auth"); 
+const {userRegister, userlogin} = require("../controller/authController"); 
 
 
 // User Registeration Route
