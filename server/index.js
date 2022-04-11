@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 const authRoutes = require('./routes/users');
 const postRoutes = require('./routes/profile');
 const livreurRoutes = require('./routes/livreur');
+const restaurantRoutes = require('./routes/restaurent');
 
 console.log(process.env.APP_SECRET);
 
@@ -28,7 +29,8 @@ app.use(express.json());
 // Route Middlewares
 app.use('/api', authRoutes);
 app.use('/api', postRoutes);
-app.use('/api', livreurRoutes)
+app.use('/api', livreurRoutes);
+app.use('/api', restaurantRoutes);
 
 app.listen(3000, ()=> console.log('Server running'));
 
