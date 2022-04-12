@@ -21,7 +21,7 @@ const RepasSchema = new mongoose.Schema({
         required: true,
     }],
     restaurant: [{ 
-        type: Schema.Types.ObjectId, 
+        type: mongoose.Schema.Types.ObjectId, 
         ref: "Restaurant" 
     }],
 });
