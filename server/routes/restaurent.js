@@ -4,4 +4,4 @@ const upload = require("../middleware/multer");
 
 router.post('/addRestaurent', upload.array("images"), restaurantController.createRestaurant);
 
-module.exports= router;
+module.exports = router;
