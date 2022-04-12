@@ -8,6 +8,7 @@ const authRoutes = require('./routes/users');
 const postRoutes = require('./routes/profile');
 const livreurRoutes = require('./routes/livreur');
 const restaurantRoutes = require('./routes/restaurent');
+const repaRoutes = require('./routes/repas');
 
 console.log(process.env.APP_SECRET);
 
@@ -31,6 +32,7 @@ app.use('/api', authRoutes);
 app.use('/api', postRoutes);
 app.use('/api', livreurRoutes);
 app.use('/api', restaurantRoutes);
+app.use('/api', repaRoutes);
 
 app.listen(3000, ()=> console.log('Server running'));
 
