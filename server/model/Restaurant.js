@@ -26,8 +26,11 @@ const RestaurantSchema = new mongoose.Schema({
     images:[{
         type: String,
         required: true,
+    }],
+    manager_id:[{
+        type: mongoose.Schema.Types.ObjectId, 
+        ref: "User" 
     }]
-    
 });
 
 module.exports = mongoose.model('Restaurant', RestaurantSchema);
