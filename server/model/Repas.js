@@ -24,6 +24,10 @@ const RepasSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId, 
         ref: "Restaurant" 
     }],
+    price: {
+        type: Number,
+        required: true,
+    },
 });
 
 module.exports = mongoose.model('Repas', RepasSchema);
